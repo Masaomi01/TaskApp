@@ -1,0 +1,119 @@
+@import './variables';
+
+$heart-size: 32px;
+$avatar-size: 32px;
+$container-padding: 24px;
+
+.article {
+  background: #F4F4F4;
+  margin: 12px 12px;
+  position: relative;
+  background: #E6E6E9; 
+  border-radius: 10px;
+  padding: 70px;
+  margin-bottom: 24px;
+  
+
+  .article-title {
+    position: absolute;
+    top: 15%;
+    left: 1%;
+    right: 76.79%;
+    padding: 0 12px;
+    font-size: 18px;
+    width: 100%;
+
+  }
+  .dropbtn-shape {
+    border: none;
+    width: 20%;
+    background-color: #E6E6E9;
+    vertical-align: right;
+    float: right;
+  }
+
+
+
+  .dropdown-shape {
+    
+    display: inline-block;
+    font-weight: normal;
+    
+    right: 5%;
+    top: 21%;
+    position: absolute;
+    background-color: #E6E6E9;
+    min-width: 160px;
+    
+  }
+  
+  
+  
+
+  &_image {
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+    margin: $container-padding * -1 $container-padding * -1 16px;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+  }
+
+  
+
+  &_detail {
+    position: absolute;
+    top: 70%;
+    left: 1%;
+    right: 76.79%;
+    padding: 0 12px;
+    font-size: 14px;
+    width: 100%;
+    
+
+    background: url(Image.png);
+
+    img {
+      cursor: pointer;
+      width: $avatar-size;
+      height: $avatar-size;
+      border-radius: 100%;
+      margin-right: 16px;
+    }
+
+    
+  }
+  
+  &_content {
+    position: absolute;
+    top: 35%;
+    left: 1%;
+    right: 76.79%;
+    padding: 0 12px;
+    font-size: 14px;
+    width: 100%;
+    
+    
+  }
+
+  
+}   
+.new-card {
+    background: $base-bg-color;
+    margin: 12px 12px;
+    position: relative;
+    border: 1px dashed rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 58px;
+    text-align: center;
+
+
+}
