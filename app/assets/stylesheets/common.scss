@@ -5,9 +5,20 @@
     background-color: black;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
+// .dropdown {
+//   position: relative;
+//   display: inline-block;
+//   font-weight: normal;
+//   display: none;
+//   right: 0;
+//   position: absolute;
+//   background-color: white;
+//   min-width: 160px;
+//   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+//   z-index: 1;
+// }
+
+.dropdown-content {
   font-weight: normal;
   display: none;
   right: 0;
@@ -17,7 +28,5 @@
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-
-
 
 

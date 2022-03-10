@@ -1,17 +1,10 @@
 .container
   %h2 All Boards
-  
-  .article
-    .article-title
-      %p title
-    .dropdown-shape
-      = image_tag 'Shape.png', class: 'dropbtn-shape'
-    .article_content
-      %p Saving money – is something we would all like.
-    .article_detail
-      = image_tag 'Oval.png'
-  .new-card
-    %p + Add new borad
-      
 
-    
+  - @articles.each do |article|
+    = render 'commons/articles', article: article
+  .new-card
+    = link_to new_article_path do
+      %p + Add new borad
+        
+  

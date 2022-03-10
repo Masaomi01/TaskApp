@@ -8,10 +8,11 @@ $container-padding: 24px;
   background: #F4F4F4;
   margin: 12px 12px;
   position: relative;
-  background: #E6E6E9; 
+  background: #E6E6E9;
   border-radius: 10px;
-  padding: 70px;
+  padding: 80px;
   margin-bottom: 24px;
+
   
 
   .article-title {
@@ -19,9 +20,10 @@ $container-padding: 24px;
     top: 15%;
     left: 1%;
     right: 76.79%;
-    padding: 0 12px;
+    padding: 0 12px 10px ;
     font-size: 18px;
     width: 100%;
+    font-weight: bold;
 
   }
   .dropbtn-shape {
@@ -100,7 +102,19 @@ $container-padding: 24px;
     padding: 0 12px;
     font-size: 14px;
     width: 100%;
+    overflow-wrap: break-word;
+  }
+  &_contents {
+    position: absolute;
+    top: 0%;
+    left: 1%;
+    right: 1%;
+    padding: 18px;
+    font-size: 18px;
+    width: 100%;
+    overflow-wrap: break-word;
     
+
     
   }
 
@@ -114,6 +128,5 @@ $container-padding: 24px;
     border-radius: 10px;
     padding: 58px;
     text-align: center;
-
 
 }
