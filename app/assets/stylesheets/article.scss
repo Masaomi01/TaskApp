@@ -22,32 +22,11 @@ $container-padding: 24px;
     right: 76.79%;
     padding: 0 12px 10px ;
     font-size: 18px;
-    width: 100%;
+    width: 60%;
     font-weight: bold;
 
   }
-  .dropbtn-shape {
-    border: none;
-    width: 20%;
-    background-color: #E6E6E9;
-    vertical-align: right;
-    float: right;
-  }
-
-
-
-  .dropdown-shape {
-    
-    display: inline-block;
-    font-weight: normal;
-    
-    right: 5%;
-    top: 21%;
-    position: absolute;
-    background-color: #E6E6E9;
-    min-width: 160px;
-    
-  }
+  
   
   
   
@@ -66,6 +45,7 @@ $container-padding: 24px;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       width: 100%;
+      
     }
   }
 
@@ -79,6 +59,7 @@ $container-padding: 24px;
     padding: 0 12px;
     font-size: 14px;
     width: 100%;
+
     
 
     background: url(Image.png);
@@ -103,6 +84,7 @@ $container-padding: 24px;
     font-size: 14px;
     width: 100%;
     overflow-wrap: break-word;
+
   }
   &_contents {
     position: absolute;
