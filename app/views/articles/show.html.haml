@@ -4,6 +4,10 @@
     
     .article_contents
       = @article.content
+  .new-card
+    = link_to new_article_task_path(@article.id) do
+      %p + Add new card
+        
     
 
   
