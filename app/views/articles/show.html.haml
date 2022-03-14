@@ -1,15 +1,11 @@
 .container
-  %h2 All Boards
-  
+  %h2=  @article.title
   .article
-    .article-title
-      %p title
-    .dropdown
-      = image_tag 'Combined-Shape.png', class: 'dropbtn'
-    .article_content
-      %p Saving money – is something we would all like.
-    .article_detail
-      = image_tag 'Oval.png'
-  .new-card
-    %p + Add new borad
-      
+    
+    .article_contents
+      = @article.content
+    
+
+  
+        
+  

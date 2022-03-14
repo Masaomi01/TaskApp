@@ -1,17 +1,27 @@
 .container
   %h2 All Boards
-  
-  .article
-    .article-title
-      %p title
-    .dropdown-shape
-      = image_tag 'Shape.png', class: 'dropbtn-shape'
-    .article_content
-      %p Saving money – is something we would all like.
-    .article_detail
-      = image_tag 'Oval.png'
-  .new-card
-    %p + Add new borad
-      
 
-    
+  - @articles.each do |article|
+    .article
+      .article-title
+        = article.title
+      .article_detail
+        = image_tag 'Oval.png'
+      - if user_signed_in? 
+        .dropdown-zero
+          .dropdown-one 
+            = image_tag 'Shape.png', class: 'dropbtn-shape'
+            .dropdown-two.mini
+              = link_to '編集する', edit_article_path(article)
+              = link_to '消去する', article_path(article), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
+                
+      = link_to article_path(id: article.id) do
+        .article_content
+          = article.content
+        
+  .new-card
+    = link_to new_article_path do
+      %p + Add new borad
+        
+  
+  
