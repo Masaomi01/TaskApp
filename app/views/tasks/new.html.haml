@@ -1,6 +1,6 @@
 .container
 
-  = form_with(model: @task, url: article_tasks_path(@task.user), local: true) do |f|
+  = form_with(model: @task, url: article_tasks_path(@task.article), method: 'post', local: true) do |f|
     %div
       = f.label :title, 'タイトル'
     %div

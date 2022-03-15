@@ -1,13 +1,16 @@
 class TasksController < ApplicationController
+    
+    
     def new
-
-        @task = current_user.tasks.build
+        article = Article.find(params[:article_id])
+        @task = article.tasks.build
     end
 
     def create
-        @task = current_user.tasks.build(task_params)
-        if @task.save
-          redirect_to article_path(@task), notice: '保存しました'
+        article = Article.find(params[:article_id])
+        @task = article.tasks.build(task_params)
+        if @task.save!
+          redirect_to article_path(article), notice: '保存しました'
         else
           flash.now[:error] = '保存できません'
           render :new
@@ -16,6 +19,7 @@ class TasksController < ApplicationController
 
     private
     def task_params
-        params.require(:task).permit(:content, :title)
+        params.require(:task).permit(:content, :title).merge(user_id: current_user.id)
     end
+    
 end 
