@@ -9,7 +9,7 @@ class TasksController < ApplicationController
     def create
         article = Article.find(params[:article_id])
         @task = article.tasks.build(task_params)
-        if @task.save!
+        if @task.save
           redirect_to article_path(article), notice: '保存しました'
         else
           flash.now[:error] = '保存できません'
