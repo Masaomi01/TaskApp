@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 2022_03_14_100305) do
     t.bigint "article_id", null: false
     t.string "title", null: false
     t.text "content", null: false
-    t.integer "limit"
     t.date "deadline", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
