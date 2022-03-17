@@ -1,4 +1,10 @@
 class TasksController < ApplicationController
+
+
+    def show
+        @board = Article.find(params[:article_id])
+        @task = @board.tasks.find(params[:id])
+    end
     
     
     def new
@@ -19,7 +25,7 @@ class TasksController < ApplicationController
 
     private
     def task_params
-        params.require(:task).permit(:content, :title, :deadline).merge(user_id: current_user.id)
+        params.require(:task).permit(:content, :title, :deadline, :eyecatch).merge(user_id: current_user.id)
     end
     
 end 
