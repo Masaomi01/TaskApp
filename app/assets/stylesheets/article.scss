@@ -6,46 +6,51 @@ $container-padding: 24px;
 
 .article {
   background: #F4F4F4;
-  margin: 12px 12px;
+  margin: 12px auto;
   position: relative;
   background: #E6E6E9;
   border-radius: 10px;
-  padding: 80px;
+  padding: 16px;
   margin-bottom: 24px;
-
+  height: 180px;
+  width: 100%;
+  
   
 
   .article-title {
-    position: absolute;
-    top: 15%;
-    left: 1%;
-    right: 76.79%;
+    
     padding: 0 12px 10px ;
     font-size: 18px;
-    width: 60%;
+    width: 80%;
     font-weight: bold;
-
+    overflow-x: scroll;
+    height: 30px;
   }
+  
   
   
   
   
 
   &_image {
-    height: 180px;
+    height: auto;
     position: relative;
     overflow: hidden;
-    margin: $container-padding * -1 $container-padding * -1 16px;
+    width: 100%;
+    height: 120px;
 
     img {
+      top: 0;
+      width: 100%;
+      height: 120px;
       position: absolute;
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      width: 100%;
-      
+      border-radius: 10%;
+      object-fit: fill;
     }
   }
 
@@ -70,6 +75,7 @@ $container-padding: 24px;
       height: $avatar-size;
       border-radius: 100%;
       margin-right: 16px;
+      
     }
 
     
@@ -77,26 +83,23 @@ $container-padding: 24px;
   
   &_content {
     position: absolute;
-    top: 35%;
-    left: 1%;
-    right: 76.79%;
+    
     padding: 0 12px;
     font-size: 14px;
     width: 100%;
     overflow-wrap: break-word;
+    text-align: left;
+    height: auto;
 
   }
   &_contents {
     position: absolute;
-    top: 0%;
-    left: 1%;
-    right: 1%;
+    
     padding: 18px;
     font-size: 18px;
     width: 100%;
     overflow-wrap: break-word;
-    
-
+    height: auto;
     
   }
 
@@ -104,11 +107,15 @@ $container-padding: 24px;
 }   
 .new-card {
     background: $base-bg-color;
-    margin: 12px 12px;
+    
     position: relative;
     border: 1px dashed rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    padding: 58px;
+    padding: 80px;
     text-align: center;
+    height: 180px;
 
+}
+.show-title {
+  overflow-x: scroll;
 }
