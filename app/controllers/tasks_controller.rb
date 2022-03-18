@@ -2,8 +2,9 @@ class TasksController < ApplicationController
 
 
     def show
-        @board = Article.find(params[:article_id])
-        @task = @board.tasks.find(params[:id])
+        @article = Article.find(params[:article_id])
+        @task = @article.tasks.find(params[:id])
+
     end
     
     

@@ -1,8 +1,8 @@
 .container
   .show-title
-    %h2=  @task.title
+    %h2= @task.title
   - if @task.eyecatch.attached?
-    .article_image
+    .task_image
       = image_tag @task.eyecatch
   .article
     .article_content
