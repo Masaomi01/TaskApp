@@ -3,8 +3,8 @@ class TasksController < ApplicationController
 
     def show
         @article = Article.find(params[:article_id])
-        @task = @article.tasks.find(params[:id])
-
+        @task = @article.tasks.find_by(params[:task_id])
+        
     end
     
     
