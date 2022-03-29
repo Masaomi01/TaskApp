@@ -6,7 +6,7 @@
       - if task.eyecatch.attached?
         .article_image
           = image_tag task.eyecatch
-      = link_to article_task_path(@article.id) do
+      = link_to article_task_path(@article.id, task.id) do
         .article-title
           = task.title
         .article_content
