@@ -1,6 +1,13 @@
 .container
   .show-title
     %h2= @task.title
+  .dropdown-zero
+    .dropdown-one
+      = image_tag 'Shape.png', class: 'dropbtn-shape'
+      .dropdown-two.mini
+        = link_to '編集する', edit_article_task_path(@article.id, @task.id)
+        = link_to '消去する', article_task_path(@article.id, @task.id), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
+ 
   - if @task.eyecatch.attached?
     .task_image
       = image_tag @task.eyecatch

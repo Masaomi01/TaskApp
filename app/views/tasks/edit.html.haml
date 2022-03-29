@@ -1,6 +1,6 @@
 .container
-  %h2 New Card
-  = form_with(model: @task, url: article_tasks_path(@task.article), method: 'post', local: true) do |f|
+  %h2 Edit Card
+  = form_with(model: @task, url: article_task_path(@task.article), method: 'put', local: true) do |f|
     %div
       = f.label :eyecatch, '画像'
     %div
