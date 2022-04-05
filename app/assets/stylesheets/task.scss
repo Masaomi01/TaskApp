@@ -18,4 +18,19 @@
       object-fit: cover;
       
     }
-  }
+}
+.task_comment {
+    background: #e2f0f7;
+    border-left: 5px dotted rgba(0,0,0,.1);
+    box-shadow: 0 0 0 5 #c8e3f5;
+    padding: 1em;
+    margin: 1em 5px;
+
+      
+      .loose-leaf p{
+        margin: 0;
+        padding: 0;
+      }
+  
+
+}
