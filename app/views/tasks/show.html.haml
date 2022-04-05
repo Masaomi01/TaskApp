@@ -14,8 +14,16 @@
   .article
     .article_content
       = @task.content
+    
     .article_detail
       = image_tag 'Oval.png'
+  %h2 Comment
+  - @comments.each do |comment|
+    .task_comment
+      = comment.content
+  .new-card
+    = link_to new_article_task_comment_path(@task.article, @task) do
+      %p + Add new comment
      
   
 

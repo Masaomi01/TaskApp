@@ -14,6 +14,7 @@ $container-padding: 24px;
   margin-bottom: 24px;
   height: 180px;
   width: 100%;
+  overflow: scroll;
   
   
 
@@ -37,7 +38,7 @@ $container-padding: 24px;
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 120px;
+    height: 100%;
 
     img {
       top: 0;
@@ -54,27 +55,23 @@ $container-padding: 24px;
     }
   }
 
-  
+  .article-flex {
+    display: flex;
+    margin: 5px;
+  }
 
   &_detail {
-    position: absolute;
-    top: 70%;
-    left: 1%;
-    right: 76.79%;
-    padding: 0 12px;
+    top: 15px;
+    
     font-size: 14px;
     width: 100%;
-
+    text-align: right;
     
-
-    background: url(Image.png);
-
     img {
       cursor: pointer;
       width: $avatar-size;
       height: $avatar-size;
       border-radius: 100%;
-      margin-right: 16px;
       
     }
 
@@ -84,12 +81,12 @@ $container-padding: 24px;
   &_content {
     position: absolute;
     
-    padding: 0 12px;
+    padding: 12px;
     font-size: 14px;
     width: 100%;
     overflow-wrap: break-word;
     text-align: left;
-    height: auto;
+    
 
   }
   &_contents {
